@@ -9,11 +9,6 @@ const MovieSearch = () => {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
-  // useEffect to fetch popular movies on component mount
-  useEffect(() => {
-  fetchPopularMovies();
-}, []);
-
   // Mock movie data for testing without API key
   const mockMovies = [
     {
@@ -75,6 +70,11 @@ const MovieSearch = () => {
       setLoading(false);
     }, 800);
   };
+
+  // useEffect to fetch popular movies on component mount
+  useEffect(() => {
+    fetchPopularMovies();
+  }, []);
 
   const searchMovies = async (e) => {
     e.preventDefault();

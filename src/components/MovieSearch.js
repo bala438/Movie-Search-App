@@ -12,7 +12,7 @@ const MovieSearch = () => {
   // useEffect to fetch popular movies on component mount
   useEffect(() => {
   fetchPopularMovies();
-}, [fetchPopularMovies]);
+}, []);
 
   // Mock movie data for testing without API key
   const mockMovies = [

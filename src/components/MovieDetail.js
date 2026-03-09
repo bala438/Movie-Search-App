@@ -10,8 +10,8 @@ const MovieDetail = () => {
 
   // useEffect to fetch movie details when component mounts or id changes
   useEffect(() => {
-    fetchMovieDetails();
-  }, [id]);
+  fetchMovieDetails();
+}, [fetchMovieDetails]);
 
   // Mock movie details for testing without API key
   const mockMovieDetails = {
